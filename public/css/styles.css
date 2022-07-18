@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  display: none;
+}
+
+.menu img {
+  height: 5vh;
+  position: relative;
+  top: 1vh;
+  right: 2vw;
+}
+
+h1 {
+  font-size: 3.5vh;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2vh;
+}
+
+.intro {
+  margin-top: 7vh;
+}
+
+.sayHi {
+  line-height: 6vh;
+  margin-left: 5.5vw;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: 2vw;
+  max-width: 65%;
+  margin-top: 3vh;
+  overflow: hidden;
+}
+
+#github img {
+  position: absolute;
+  margin-left: 5.5vw;
+  margin-top: 0;
+  height: 32px;
+  width: auto;
+}
+
+.second {
+  max-width: 70vw;
+  line-height: 4.5vh;
+  margin-top: 2vh;
+  margin-left: 5.5vw;
+}
+
+.footer a {
+  color: black;
+  font-weight: 300;
+  font-size: 2vh;
+  letter-spacing: 1vw;
+  text-decoration: underline;
+  text-underline-offset: 1vh;
+  text-align: center;
+}
+
+.footer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 32px;
+  height: auto;
+  padding-top: 1vh;
+}
+
+.footer {
+  background-color: #e7e7e7;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+}
+
+/* lineup class and keyframes */
+.lineUp {
+  -webkit-animation: 3s anim-lineUp ease-out;
+          animation: 3s anim-lineUp ease-out;
+}
+
+@-webkit-keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80%);
+            transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80%);
+            transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .navbar a {
+    color: black;
+    text-align: center;
+    padding: 2vh;
+    text-decoration: none;
+    font-size: 1.5vh;
+  }
+  .menu img {
+    display: none;
+  }
+  .intro {
+    margin-top: 4vh;
+  }
+  .second {
+    max-width: 20vw;
+  }
+  img {
+    max-width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: 10vw;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  /* 15% from the top and centered */
+  padding: 2vh;
+  border: 1px solid #888;
+  border-radius: 2vh;
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content p {
+  line-height: 5vh;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-content a {
+  color: black;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
