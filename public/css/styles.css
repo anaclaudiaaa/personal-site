@@ -2,17 +2,56 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  color: black;
 }
 
-.navbar {
-  display: none;
+.li {
+  list-style: none;
 }
 
-.menu img {
-  height: 5vh;
-  position: relative;
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.hamburguer {
+  position: absolute;
   top: 1vh;
   right: 2vw;
+}
+
+.hamburguer.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguer.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-link {
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 
 h1 {
@@ -22,6 +61,10 @@ h1 {
 
 h2 {
   font-size: 2vh;
+}
+
+a {
+  color: black;
 }
 
 .intro {
@@ -48,6 +91,7 @@ img {
   margin-top: 0;
   height: 32px;
   width: auto;
+  cursor: pointer;
 }
 
 .second {
@@ -93,6 +137,12 @@ img {
       justify-content: space-around;
 }
 
+.tobecontinued {
+  text-align: center;
+  margin-top: 60%;
+  margin-bottom: 60%;
+}
+
 #box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,6 +152,16 @@ img {
       -ms-flex-flow: column;
           flex-flow: column;
   height: 100%;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
 }
 
 /* lineup class and keyframes */
@@ -168,6 +228,11 @@ img {
     padding: 2vh;
     text-decoration: none;
     font-size: 1.5vh;
+    cursor: pointer;
+  }
+  .navbar a:hover {
+    font-weight: 800;
+    color: black;
   }
   .menu img {
     display: none;
@@ -183,6 +248,10 @@ img {
     display: block;
     margin-left: auto;
     margin-right: 10vw;
+  }
+  .tobecontinued {
+    margin-top: 20%;
+    margin-bottom: 20%;
   }
 }
 
@@ -214,7 +283,7 @@ img {
   padding: 2vh;
   border: 1px solid #888;
   border-radius: 2vh;
-  width: 30%;
+  width: 40%;
   /* Could be more or less, depending on screen size */
 }
 
